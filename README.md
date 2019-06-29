@@ -1,31 +1,31 @@
-# Airbnb CSS / Sass Styleguide
+# ეარბიენბის CSS / Sass სტილისტური სახელმძღვანელო
 
-*A mostly reasonable approach to CSS and Sass*
+*ძირითადად გონივრული მიდგომები CSS-სა და Sass-თან დაკავშირებით*
 
-## Table of Contents
+## შინაარსი
 
-1. [Terminology](#terminology)
-    - [Rule Declaration](#rule-declaration)
+1. [ტერმინოლოგია](#terminology)
+    - [ინსტრუქციის გამოცხადება](#rule-declaration)
     - [Selectors](#selectors)
-    - [Properties](#properties)
+    - [მახასიათებლები](#properties)
 1. [CSS](#css)
-    - [Formatting](#formatting)
-    - [Comments](#comments)
-    - [OOCSS and BEM](#oocss-and-bem)
+    - [გაფორმება](#formatting)
+    - [კომენტარები](#comments)
+    - [OOCSS და BEM](#oocss-and-bem)
     - [ID Selectors](#id-selectors)
     - [JavaScript hooks](#javascript-hooks)
-    - [Border](#border)
+    - [საზღვრები](#border)
 1. [Sass](#sass)
-    - [Syntax](#syntax)
-    - [Ordering](#ordering-of-property-declarations)
-    - [Variables](#variables)
+    - [სინტაქსი](#syntax)
+    - [თანმიმდევრობა](#ordering-of-property-declarations)
+    - [ცვლადები](#variables)
     - [Mixins](#mixins)
     - [Extend directive](#extend-directive)
     - [Nested selectors](#nested-selectors)
-1. [Translation](#translation)
-1. [License](#license)
+1. [თარგმანები](#translation)
+1. [ლიცენზია](#license)
 
-## Terminology
+## ტერმინოლოგია
 
 ### Rule declaration
 
