@@ -6,7 +6,7 @@
 
 1. [ტერმინოლოგია](#terminology)
     - [ინსტრუქციის გამოცხადება](#rule-declaration)
-    - [Selectors](#selectors)
+    - [სელექტორები](#selectors)
     - [მახასიათებლები](#properties)
 1. [CSS](#css)
     - [გაფორმება](#formatting)
@@ -27,9 +27,9 @@
 
 ## ტერმინოლოგია
 
-### Rule declaration
+### ინსტრუქციის გამოცხადება
 
-A “rule declaration” is the name given to a selector (or a group of selectors) with an accompanying group of properties. Here's an example:
+ინსტრუქცია არის სელექტორის(ან სელექტორების ჯგუფის) სახელისა და მახახასიათებლების ერთობლიობა რომელსაც აქვს შემდეგი სახე:
 
 ```css
 .listing {
@@ -38,9 +38,9 @@ A “rule declaration” is the name given to a selector (or a group of selector
 }
 ```
 
-### Selectors
+### სელექტორები
 
-In a rule declaration, “selectors” are the bits that determine which elements in the DOM tree will be styled by the defined properties. Selectors can match HTML elements, as well as an element's class, ID, or any of its attributes. Here are some examples of selectors:
+ინსტრუქციის გამოცხადებისას, "სელექტორები" განსაზღვრავენ თუ DOM-ის რომელ ელემენტებზე გავრცელდება მითითებული მახასიათებლები. სელექტორი შეიძლება განისაზღვროს HTML ელემენტის, ელემენტის კლასის, აიდის ან მისი რომელიმე ატრიბუტის მეშვეობით. ქვემოთ მოყვანილია რამდენიმე მაგალითი:
 
 ```css
 .my-element-class {
@@ -52,9 +52,9 @@ In a rule declaration, “selectors” are the bits that determine which element
 }
 ```
 
-### Properties
+### მახასიათებლები
 
-Finally, properties are what give the selected elements of a rule declaration their style. Properties are key-value pairs, and a rule declaration can contain one or more property declarations. Property declarations look like this:
+და ბოლოს, მახასიათებლები ანიჭებენ სელექტორებით არჩეულ ელემენტებს სტილს. თითოეული მახასიათებელი შედგება სახელისა და მნშვნელობისაგან, ნებისმიერი ინსტრუქცია შეიცავს ერთ ან რამდენიმე მახასიათებელს. მაგალითად: 
 
 ```css
 /* some selector */ {
@@ -63,23 +63,23 @@ Finally, properties are what give the selected elements of a rule declaration th
 }
 ```
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ დასაწყისში ასვლა](#table-of-contents)**
 
 ## CSS
 
-### Formatting
+### გაფორმება
 
-* Use soft tabs (2 spaces) for indentation.
-* Prefer dashes over camelCasing in class names.
-  - Underscores and PascalCasing are okay if you are using BEM (see [OOCSS and BEM](#oocss-and-bem) below).
-* Do not use ID selectors.
-* When using multiple selectors in a rule declaration, give each selector its own line.
-* Put a space before the opening brace `{` in rule declarations.
-* In properties, put a space after, but not before, the `:` character.
-* Put closing braces `}` of rule declarations on a new line.
-* Put blank lines between rule declarations.
+* გამოიყენე მარტივი tab(2 გამოტოვება) სტრიქონის დაწყებისას.
+* კლასის სახელის განსაზღვრისას უპირატესობა მიანიჭე ტირეს და არა camelCase-ს.
+  - ქვედა ტირის და PascalCase-ების გამოყენებაც დაშვებულია თუ იყენებ BEM მიდგომას(დეტალები [OOCSS და BEM](#oocss-and-bem) სექციაში)
+* არ გამოიყენო ID სელექტორები.
+* ერთ ინსტრუქციაში რამდენიმე სელექტორის გამოყენების შემთხვევაში თითოეული მათგანი დაწერე ცალკე სტრიქონზე.
+* ინსტრუქციის გამოცხადებისას, გამხსნელი ფიგურული ბრჩხილის `}` წინ დასვი გამოტოვება.
+* მახასიათებელში, გამოტოვება დასვი ორწერტილის `:` შემდეგ და არა წინ.
+* ჩამკეტი ფიგურული ბრჩხილი `}` დასვი ახალ სტრიქონზე.
+* ინსტრუქციებს შორის გამოიყენე ცარიელი სტრიქონი.
 
-**Bad**
+**ცუდი პრაქტიკა**
 
 ```css
 .avatar{
@@ -93,7 +93,7 @@ Finally, properties are what give the selected elements of a rule declaration th
 }
 ```
 
-**Good**
+**კარგი პრაქტიკა**
 
 ```css
 .avatar {
@@ -108,13 +108,13 @@ Finally, properties are what give the selected elements of a rule declaration th
 }
 ```
 
-### Comments
+### კომენტარები
 
-* Prefer line comments (`//` in Sass-land) to block comments.
-* Prefer comments on their own line. Avoid end-of-line comments.
-* Write detailed comments for code that isn't self-documenting:
-  - Uses of z-index
-  - Compatibility or browser-specific hacks
+* უპირატესობა მიანიჭე სტრიქონის კომენტარებს(// Sass-ის გარემოში) და არა ბლოკისას.
+* უმჯობესია კომენტარი განათავსო თავის დამოუკიდებელ სტრიქონზე ვიდრე იმავე სტრიქონის ბოლოში სადაც კოდია.
+* კოდისთვის რომელიც თვითონ ვერ აღწერს დანიშნულებას დაწერე დეტალური კომენტარი:
+  - z-index მახასიათებლის შემთხვევაში
+  - ბრაუზერთან თავსებადობის ან მასთან დაკავშირებული სხვა განმარტებისთვის
 
 ### OOCSS and BEM
 
