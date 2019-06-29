@@ -136,8 +136,9 @@
   * Harry Roberts' [BEM-ის შესავალი](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
 
 We recommend a variant of BEM with PascalCased “blocks”, which works particularly well when combined with components (e.g. React). Underscores and dashes are still used for modifiers and children.
+რეკომენდაციას ვუწევთ BEM-ის და PascalCased ბლოკების სინთეზის ვარიანტს, რომელიც განსაკუთრებულად კარგად მუშაობს კომპონენტებთან(მაგ. რეაქთ) კომბინაციის შემთხვევაში. ქვედა ტირეები და ტირეები კვლავინდებურად გამოიყენება მოდიფიკატორებსა და შვილებთან.
 
-**Example**
+**მაგალითი**
 
 ```jsx
 // ListingCard.jsx
@@ -164,15 +165,15 @@ function ListingCard() {
 .ListingCard__content { }
 ```
 
-  * `.ListingCard` is the “block” and represents the higher-level component
-  * `.ListingCard__title` is an “element” and represents a descendant of `.ListingCard` that helps compose the block as a whole.
-  * `.ListingCard--featured` is a “modifier” and represents a different state or variation on the `.ListingCard` block.
+  * `.ListingCard` არის ბლოკი და წარმოადგენს ყველაზე ზედა დონის კომპონენტს
+  * `.ListingCard__title` არის ელემენტი და წარმოადგენს `.ListingCard`-ის შთამომავალს რომელიც მონაწილეობს მთლიანი ბლოკის შექმნაში.
+  * `.ListingCard--featured` არის მოდიფიკატორი რომელიც წარმოადგენს `.ListingCard` ბლოკის ერთ-ერთ ვარიაციას ან მდგომარეობას.
 
-### ID selectors
+### ID სელექტორები
 
-While it is possible to select elements by ID in CSS, it should generally be considered an anti-pattern. ID selectors introduce an unnecessarily high level of [specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) to your rule declarations, and they are not reusable.
+მიუხედავად იმისა რომ CSS-ში ელემენტების დასელექთება შესაძლებელია ID-ს მეშვეობით, ეს მიდგომა ზოგადად მიჩნეულია როგორც ცუდი პრაქტიკა. ID სელექტორებს შემოაქვთ ზედმეტად მაღალი დონის [სპეციფიკურობა](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity) ინსტრუქციებში და მათი ხელახლა გამოყენება შეუძლებელია.
 
-For more on this subject, read [CSS Wizardry's article](http://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/) on dealing with specificity.
+სპეციფიკურობასთან დაკავშირებით დამატებითი ინფორმაციისთვის წაიკითხეთ [CSS Wizardry-ს სტატის](http://csswizardry.com/2014/07/hacks-for-dealing-with-specificity/)
 
 ### JavaScript hooks
 
