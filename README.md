@@ -135,7 +135,6 @@
   * CSS Trick's [BEM 101](https://css-tricks.com/bem-101/)
   * Harry Roberts' [BEM-ის შესავალი](http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/)
 
-We recommend a variant of BEM with PascalCased “blocks”, which works particularly well when combined with components (e.g. React). Underscores and dashes are still used for modifiers and children.
 რეკომენდაციას ვუწევთ BEM-ის და PascalCased ბლოკების სინთეზის ვარიანტს, რომელიც განსაკუთრებულად კარგად მუშაობს კომპონენტებთან(მაგ. რეაქთ) კომბინაციის შემთხვევაში. ქვედა ტირეები და ტირეები კვლავინდებურად გამოიყენება მოდიფიკატორებსა და შვილებთან.
 
 **მაგალითი**
@@ -177,19 +176,19 @@ function ListingCard() {
 
 ### JavaScript hooks
 
-Avoid binding to the same class in both your CSS and JavaScript. Conflating the two often leads to, at a minimum, time wasted during refactoring when a developer must cross-reference each class they are changing, and at its worst, developers being afraid to make changes for fear of breaking functionality.
+თავი აარიდე ჯავასკრიპტიდან და CSS-დან ერთსა და იმავე კლასზე მიმართვას. აღნიშნული უკეთეს შემთხვევაში იწვევს ზედმეტი დროის ხარჯვას იმ შემთხვევაში თუ საჭირო ხდება კლასის სახელის შეცვლა და შესაბამისად კლასის ყველა ჯვარედინი მითითების პოვნა და შეცვლა, ხოლო უარესში დეველოპერები ხშირად საერთოდ უარს ამბობენ ცვლილებებზე იმის შიშით რომ ფუნქციონალი აირევა.  
 
-We recommend creating JavaScript-specific classes to bind to, prefixed with `.js-`:
+რეკომენდირებულია ჯავასკრიპტთან დაკავშირებული კლასების `.js-` პრეფიქსით მონიშვნა:
 
 ```html
-<button class="btn btn-primary js-request-to-book">Request to Book</button>
+<button class="btn btn-primary js-request-to-book">ჯავშნის მოთხოვნა</button>
 ```
 
-### Border
+### კიდები
 
-Use `0` instead of `none` to specify that a style has no border.
+იმის მისათითებლად რომ სტილს არ აქვს კიდეები უმჯობესია `0`-ის გამოყენება `none`-ის ნაცვლად.
 
-**Bad**
+**ცუდი პრაქტიკა**
 
 ```css
 .foo {
@@ -197,21 +196,21 @@ Use `0` instead of `none` to specify that a style has no border.
 }
 ```
 
-**Good**
+**კარგი პრაქტიკა**
 
 ```css
 .foo {
   border: 0;
 }
 ```
-**[⬆ back to top](#table-of-contents)**
+**[⬆ დასაწყისში ასვლა](#table-of-contents)**
 
 ## Sass
 
-### Syntax
+### სინტაქსი
 
-* Use the `.scss` syntax, never the original `.sass` syntax
-* Order your regular CSS and `@include` declarations logically (see below)
+* გამოიყენე `.scss` გაფართოება და არა ორიგინალი `.sass`
+* დაალაგე ნორმალური CSS და `@include` გამოცხადებები ლოგიკურად (დეტალები ქვემოთ)
 
 ### Ordering of property declarations
 
