@@ -212,11 +212,11 @@ function ListingCard() {
 * გამოიყენე `.scss` გაფართოება და არა ორიგინალი `.sass`
 * დაალაგე ნორმალური CSS და `@include` გამოცხადებები ლოგიკურად (დეტალები ქვემოთ)
 
-### Ordering of property declarations
+### მახასიათებლების გამოცხადების თანმიმდევრობა
 
-1. Property declarations
+1. მახასიათებლების გამოცხადება
 
-    List all standard property declarations, anything that isn't an `@include` or a nested selector.
+    გამოაცხადე სტანდარტული მახასიათებლები, ყველაფერი გარდა `@include` ან ჩალაგებული სელექტორებისა.
 
     ```scss
     .btn-green {
@@ -226,9 +226,9 @@ function ListingCard() {
     }
     ```
 
-2. `@include` declarations
+2. `@include` გამოცხადებები
 
-    Grouping `@include`s at the end makes it easier to read the entire selector.
+    `@include` გამოცხადებების დაჯგუფება ბოლოში ამარტივებს მთლიანი სელექტორის წაკითხვას.
 
     ```scss
     .btn-green {
@@ -239,9 +239,9 @@ function ListingCard() {
     }
     ```
 
-3. Nested selectors
+3. ჩალაგებული სელექტორები
 
-    Nested selectors, _if necessary_, go last, and nothing goes after them. Add whitespace between your rule declarations and nested selectors, as well as between adjacent nested selectors. Apply the same guidelines as above to your nested selectors.
+    ჩალაგებული სელექტორები, _აუცილებლოგის შემთხვევაში_, ჩასვი ბოლოში, რის შემდეგაც სრულდება ინსტრუქცია. ყოველი ჩალაგებული სელექტორი ზედა მახასიათებლისგან გამოყოფილი უნდა იყოს ცარიელი სტრიქონით, ასევე რამდენიმე ჩალაგებული სელექტორიც ერთმანეთისგან გამოყავი ცარიელი სტრიქონით. იგივე მიდგომა ვრცელდება შიდა ინსტრუქციებში.
 
     ```scss
     .btn {
@@ -255,21 +255,21 @@ function ListingCard() {
     }
     ```
 
-### Variables
+### ცვლადები
 
-Prefer dash-cased variable names (e.g. `$my-variable`) over camelCased or snake_cased variable names. It is acceptable to prefix variable names that are intended to be used only within the same file with an underscore (e.g. `$_my-variable`).
+უპირატესობა ენიჭება ტირით გამოყოფილ ცვლადის სახელებს(მაგ. `$my-variable`) ვიდრე camelCased ან ქვედა ტირით გამოყოფილებს. ცვლადებისთვის რომლებიც განკუთვნილია მხოლოდ მიმდინარე ფაილში გამოყენებისთვის მიზანშეწონილია ქვედა ტირის პრექისად გამოყენება(მაგ. `$_my-variable`)
 
-### Mixins
+### მიქსინები
 
-Mixins should be used to DRY up your code, add clarity, or abstract complexity--in much the same way as well-named functions. Mixins that accept no arguments can be useful for this, but note that if you are not compressing your payload (e.g. gzip), this may contribute to unnecessary code duplication in the resulting styles.
+მიქსინები გამოიყენება DRY პრინციპის იმპლემენტაციის, კოდში სიცხადის შემოტანის და განზოგადებისთვის მსგავსად გონივრულად დასათაურებული ფუნქციებისა. ამ ყველაფრის საშუალებას იძლევა უარგუმენტო მიქსინები, თუმცა გასათვალისწინებელია რომ თუ არ ხდება საბოლოო კოდის შეკუმშვა(მაგ. gzip-ის მეშვეობით) შესაძლებელია მივიღოთ ერთი და იგივე კოდის ზედმეტი გამეორება. 
 
-### Extend directive
+### Extend მითითება
 
-`@extend` should be avoided because it has unintuitive and potentially dangerous behavior, especially when used with nested selectors. Even extending top-level placeholder selectors can cause problems if the order of selectors ends up changing later (e.g. if they are in other files and the order the files are loaded shifts). Gzipping should handle most of the savings you would have gained by using `@extend`, and you can DRY up your stylesheets nicely with mixins.
+`@extend`-ის გამოყენება უმჯობესია იყოს თავიდან არიდებული რადგან მისი თვისებები არაინტუიციური და პოტენციურად საშიშია, განსაკუთრებით თუ ისინი გამოყენებულია ჩალაგებულ ინსტრუქციებში. თვით უმაღლეს დონეზე არსებული სელექტორების დაექსთენდებამ შეიძლება გამოიწვიოს გარკვეული პრობლემები თუ სელექტორების თანმიმდევრობა არ არის მუდმივი და შესაძლებელია შეიცვალოს(მაგ. როდესაც ისინი სხვადასხვა ფაილშია და ამ ფაილების ჩატვირთვის თანმიმდევრობა ცვალებადია). Gzip-ის გამოყენებით შესაძლებელია იგივე სარგებლის მიღება რასაც `@extend`-ით მივიღებდით, პლიუს მიქსინებით ვიღებთ უფრო დალაგებულ კოდს, რომელიც იცავს DRY პრინციპს.  
 
-### Nested selectors
+### ჩალაგებული სელექტორები
 
-**Do not nest selectors more than three levels deep!**
+**არ ჩაალაგო სელექტორები სამზე მეტ დონეზე**
 
 ```scss
 .page-container {
@@ -281,22 +281,23 @@ Mixins should be used to DRY up your code, add clarity, or abstract complexity--
 }
 ```
 
-When selectors become this long, you're likely writing CSS that is:
+როდესაც სელექტორები ხდება ასეთი გრძელი, დიდი ალბათობით წერ კოდს რომელიც:
 
-* Strongly coupled to the HTML (fragile) *—OR—*
-* Overly specific (powerful) *—OR—*
-* Not reusable
+* მკაცრად დაწყვილებულია HTML-თან (არამყარი) *_ან_*
+* ზედმეტად კონკრეტულია (მძლავრი) *_ან_*
+* არა ხელმეორედ გამოყენებადია
 
 
-Again: **never nest ID selectors!**
+კიდევ ერთხელ: **არასდრო ჩაალაგო ID სელექტორები!**
 
 If you must use an ID selector in the first place (and you should really try not to), they should never be nested. If you find yourself doing this, you need to revisit your markup, or figure out why such strong specificity is needed. If you are writing well formed HTML and CSS, you should **never** need to do this.
+თუ მაინც გიწევს ID სელექტორების გამოყენება(ეცადე რომ თავიდან აირიდო), არასოდეს ჩაალაგო ერთმანეთში. თუ ამჩნევ რომ გიწევს ამის გაკეთება, ჯობია გადახედო HTML სტრუქტურას, ან ეცადო იმის გარკვევას თუ რატომ მოგიწია ასეთი მკაცრი კონკრეტიკის გამოყენება. თუ კარგად დალაგებულ HTML და CSS-ს წერ, **არასდროს** არ უნდა მოგიწიოს ამის გაკეთება.
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ დასაწყისში ასვლა](#table-of-contents)**
 
-## Translation
+## თარგმანები
 
-  This style guide is also available in other languages:
+  მოცემული სტილისტური სახელმძღვანელო ასევე ხელმისაწვდომია შემდეგ ენებზე:
 
   - ![id](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Indonesia.png) **Bahasa Indonesia**: [mazipan/css-style-guide](https://github.com/mazipan/css-style-guide)
   - ![tw](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Taiwan.png) **Chinese (Traditional)**: [ArvinH/css-style-guide](https://github.com/ArvinH/css-style-guide)
@@ -312,7 +313,7 @@ If you must use an ID selector in the first place (and you should really try not
   - ![vn](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Italy.png) **Italian**: [antoniofull/linee-guida-css](https://github.com/antoniofull/linee-guida-css)
   - ![de](https://raw.githubusercontent.com/gosquared/flags/master/flags/flags/shiny/24/Germany.png) **German**: [tderflinger/css-styleguide](https://github.com/tderflinger/css-styleguide)
 
-**[⬆ back to top](#table-of-contents)**
+**[⬆ დასაწყისში ასვლა](#table-of-contents)**
 
 ## License
 
