@@ -145,7 +145,7 @@ function ListingCard() {
   return (
     <article class="ListingCard ListingCard--featured">
 
-      <h1 class="ListingCard__title">Adorable 2BR in the sunny Mission</h1>
+      <h1 class="ListingCard__title">Adorable 2BR in the sunny Mission.</h1>
 
       <div class="ListingCard__content">
         <p>Vestibulum id ligula porta felis euismod semper.</p>
